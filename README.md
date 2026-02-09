@@ -26,7 +26,21 @@ I wrote a lightweight Prometheus exporter that monitors Apache NiFi cluster stat
 git clone https://github.com/dubuntu13/nifi-cluster-exporter.git
 cd nifi-cluster-exporter
 
+#edit the .env file and put your variable in it.
+# .env file
+```
+NIFI_URL=https://<NIFI_IPs>:8443
+NIFI_USER=<NIFI_USERNAME>
+NIFI_PASS=<NIFI_PASS>
+CHECK_INTERVAL=15
+EXPORTER_PORT=9103
+KNOWN_NODES=nifi01,nifi02,nifi03 #change to whatevere you set as hostname of host's
+VERIFY_SSL=false
+```
+
 # Install dependencies
-pip install -r requirements.txt
+pip install requests prometheus-client
+
+mv nifi_exporter.service  /etc/systemd/system/
 
 #Freedom_For_Iran
