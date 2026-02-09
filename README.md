@@ -28,7 +28,6 @@ cd nifi-cluster-exporter
 
 #edit the .env file and put your variable in it.
 # .env file
-```
 NIFI_URL=https://<NIFI_IPs>:8443
 NIFI_USER=<NIFI_USERNAME>
 NIFI_PASS=<NIFI_PASS>
@@ -36,7 +35,6 @@ CHECK_INTERVAL=15
 EXPORTER_PORT=9103
 KNOWN_NODES=nifi01,nifi02,nifi03 #change to whatevere you set as hostname of host's
 VERIFY_SSL=false
-```
 
 # Install dependencies
 pip install requests prometheus-client
